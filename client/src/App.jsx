@@ -9,6 +9,9 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from './store/auth';
+import CourseForm from './pages/CourseForm';
+import UserProfile from './components/Profile/UserProfile';
+import UserDashboard from './components/Profile/UserDashboard';
 const App = () => {
 
   const dispatch = useDispatch();
@@ -31,7 +34,11 @@ const App = () => {
         <Route path="/allcourses" element={<Courses/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path="/dashboard" element={<Dashboard/>}></Route>
+        <Route path="/dashboard" element={<Dashboard/>}>
+        <Route index element={<UserProfile/>}/>
+        <Route path="/dashboard/addcourses" element={<CourseForm/>}/>
+        <Route path="/dashboard/coursedashboard" element={<UserDashboard/>}/>
+        </Route>
       </Routes>
       <Footer></Footer>
     </div>

@@ -20,6 +20,16 @@ const userSchema = new mongoose.Schema(
       enum: ["admin", "student"],
       default: "student",
     },
+    photoUrl: {
+      type: String,
+      default: "",
+    },
+    enrolledCourses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
   },
   { timestamps: true }
 );

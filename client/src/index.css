@@ -1,1 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Tapestry&display=swap");
 @import "tailwindcss";
+
+@theme {
+    --font-fredrick:"Fredericka the Great", serif;
+    --font-tapestry: "Tapestry", serif;
+}

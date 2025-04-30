@@ -14,8 +14,8 @@ const Courses = () => {
       },[]);
   return (
     <div className='bg-cyan-700 h-auto px-12 py-8'>
-       <h4 className="text-3xl text-cyan-200">
-    Recently added Courses
+       <h4 className="text-3xl font-fredrick text-cyan-200">
+   All Courses
     </h4>
     {!data && <div className="flex items-center justify-center my-8"><Loader/>{" "}</div>}
     <div className="my-8 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-8">

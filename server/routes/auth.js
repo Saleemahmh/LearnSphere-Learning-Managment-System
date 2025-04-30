@@ -61,8 +61,8 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Get All Users
-router.get("/getusers", authenticateToken, async (req, res) => {
+// Get User information
+router.get("/getuserinfo", authenticateToken, async (req, res) => {
   try {
     const { id } = req.headers;
     const data = await User.findById(id).select("-password");

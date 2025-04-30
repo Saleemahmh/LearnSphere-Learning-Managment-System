@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const multer = require("multer");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,10 +14,9 @@ app.use(express.json());
 //Routes
 const authRoutes = require("./routes/auth");
 const courseRoutes = require("./routes/course");
-//const userRoutes = require("./routes/User");
+
 app.use("/auth", authRoutes);
 app.use("/auth", courseRoutes);
-//app.use("/user", userRoutes);
 
 //db connection
 mongoose

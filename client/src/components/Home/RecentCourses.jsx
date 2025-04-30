@@ -14,7 +14,7 @@ const RecentCourses = () => {
     },[]);
   return (
     <div className="mt-8 px-4">
-        <h4 className="text-3xl text-cyan-200">
+        <h4 className="text-3xl font-fredrick text-cyan-200">
         Recently added Courses
         </h4>
         {!data && <div className="flex items-center justify-center my-8"><Loader/>{" "}</div>}

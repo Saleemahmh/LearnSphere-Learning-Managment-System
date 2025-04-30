@@ -11,6 +11,10 @@ const courseSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    courseimgurl: {
+      type: String,
+      default: "",
+    },
     description: {
       type: String,
       required: true,
@@ -19,9 +23,21 @@ const courseSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    enrolledStudents: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+    lecture: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Lecture",
+      },
+    ],
     instructor: {
-      type: String,
-      required: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
   },
   { timestamps: true }
